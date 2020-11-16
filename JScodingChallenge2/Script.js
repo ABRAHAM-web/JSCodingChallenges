@@ -203,4 +203,4 @@ else  {
 }
 
 console.log(johnrestaurantBills);
-console.log(johnrestaurantTips);
+console.log(johnrestaurantTips); 
