@@ -70,6 +70,8 @@ switch (job) {
 //falsy values = undefined, null, 0, '',NaN
 //Truthy are all the other values
 
+/*
+
 var height;
 
 if (height || height === 0) {
@@ -204,3 +206,76 @@ else  {
 
 console.log(johnrestaurantBills);
 console.log(johnrestaurantTips); 
+*/
+
+//Objects and properties
+//Object literal
+/*
+var john = {
+        firstName : 'Abraham',
+        lastname : 'Poggenpoel',
+        birthyear : '1975',
+        family : ['Susan','Willemien','Cleopatra'],
+        job : 'Teacher',
+        salary : 40000,
+        ismarried : false
+
+}
+
+console.log('My eerste naam is : '+john.firstName);
+
+console.log('John se familie lede is :'+john.family[2]);
+//Mutate object data
+john.job = 'senator';
+
+console.log(john.job);
+
+john['salary'] = 50500;
+console.log(john['salary']);
+
+//Another way of declaring the object new object
+jane = new Object;
+jane.name = 'Jane';
+
+console.log(jane.name); 
+//Objects and methods
+*/
+
+//Coding challenge 4
+
+mark = {
+    fullName : 'Mark Spark',
+    height : 1.70,
+    weight : 160,
+    bmi : 0,
+    markbmi : function (height,weight) {
+        return weight / (height * height);
+    }   
+
+}
+
+john = {
+    fullName : 'John Wayne',
+    height : 1.95,
+    weight : 220,
+    bmi : 0,
+    johnbmi : function (height,weight) {
+        return weight / (height * height);
+    }   
+
+}
+//var johnbmi = john.johnbmi(1.7,160);
+
+mark.bmi = mark.markbmi(mark.height,mark.weight);
+john.bmi = john.johnbmi(john.height,john.weight);
+
+console.log(mark.fullName +' BMI is at :'+ mark.markbmi(mark.height,mark.weight));
+console.log(john.fullName +' John\s BMI is at :'+ john.johnbmi(john.height,john.weight));
+
+mark.bmi > john.bmi ? console.log('The BMI of '+mark.fullName+' is higher than that of '+john.fullName): 
+                          console.log('The BMI of '+mark.fullName+' is lower  that that of '+john.fullName);
+
+
+
+
+
