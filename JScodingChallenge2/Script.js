@@ -276,6 +276,95 @@ mark.bmi > john.bmi ? console.log('The BMI of '+mark.fullName+' is higher than t
                           console.log('The BMI of '+mark.fullName+' is lower  that that of '+john.fullName);
 
 
+//Loops and iterations
+
+var johnRestaurantCount,markRestaurantCount;
+
+//johnRestaurantCount = prompt('How many restaurants did john and his family visit when they were on holiday ? :');
+//markRestaurantCount = prompt('How many restaurants did mark and his family visit when they were on holiday ? :');
+
+//console.log(johnRestaurantCount);
+//console.log(markRestaurantCount);
+
+
+var john = {
+    restaurantCount : 0,
+    restaurantBills : [],
+    restaurantTips : [],
+    restaurantTotalBills : [],
+    tipaverage : 0    
+}
+
+var mark = {
+    restaurantCount : 0,
+    restaurantBills : [],
+    restaurantTips : [],
+    restaurantTotalBills : []
+}
+
+//Reading number of restaurants John visited
+john.restaurantCount = prompt('How many restaurants did john and his family visit when they were on holiday ? :');
+
+for (i=0;i<john.restaurantCount;i++) {
+    john.restaurantBills[i] = prompt('Please enter John\'s bill amount for restaurant :'+(i+1));
+}
+
+for (i=0;i<john.restaurantBills.length;i++) {
+    //console.log(john.restaurantBills[i]);
+    if (john.restaurantBills[i] < 50){
+        john.restaurantTips[i] = john.restaurantBills[i] * (20/100);
+    } 
+    else if (john.restaurantBills[i] >= 50 && john.restaurantBills[i] <= 200){
+        john.restaurantTips[i] = john.restaurantBills[i] * (15/100);
+    }
+    else if (john.restaurantBills[i] > 200) {
+        john.restaurantTips[i] = john.restaurantBills[i] * (10/100);
+    }
+}
+
+console.log(john.restaurantBills);
+console.log(john.restaurantTips);
+
+//Calculate the tip average
+
+for (i=0;i<john.restaurantBills.length;i++){
+    john.tipaverage = john.tipaverage + john.restaurantTips[i];
+}
+john.tipaverage = john.tipaverage/john.restaurantTips.length;
+
+console.log('The average tips for John was :'+john.tipaverage);
+
+
+//Reading number of restaurants Mark visited
+mark.restaurantCount = prompt('How many restaurants did Mark and his family visit when they were on holiday ? :');
+
+for (i=0;i<mark.restaurantCount;i++) {
+    mark.restaurantBills[i] = prompt('Please enter Mark\'s bill amount for restaurant :'+(i+1));
+}
+
+for (i=0;i<mark.restaurantBills.length;i++) {
+    //console.log(mark.restaurantBills[i]);
+    if (mark.restaurantBills[i] < 50){
+        mark.restaurantTips[i] = mark.restaurantBills[i] * (20/100);
+    } 
+    else if (mark.restaurantBills[i] >= 50 && mark.restaurantBills[i] <= 200){
+        mark.restaurantTips[i] = mark.restaurantBills[i] * (15/100);
+    }
+    else if (mark.restaurantBills[i] > 200) {
+        mark.restaurantTips[i] = mark.restaurantBills[i] * (10/100);
+    }
+}
+
+
+
+//Calculate the tip average for Mark
+
+for (i=0;i<mark.restaurantBills.length;i++){
+    mark.tipaverage = mark.tipaverage + mark.restaurantTips[i];
+}
+mark.tipaverage = mark.tipaverage/mark.restaurantTips.length;
+
+console.log('The average tips for Mark was :'+mark.tipaverage);
 
 
 
