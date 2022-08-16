@@ -54,16 +54,16 @@ console.log(firstname + ' drinks '+drink);
 var job = 'driver';
 
 switch (job) {
-    case 'teacher' : 
+    case 'teacher' :
         console.log('The person gives lessons');
         break;
     case 'programmer' :
     case 'driver' :
         console.log('The person writes software for a respectable software company or driver around');
-        break;   
+        break;
 
     default :
-        console.log('The person does not want to work');     
+        console.log('The person does not want to work');
 }
 
 //Truthy and falsy values and equality operators
@@ -103,12 +103,12 @@ switch (true) {
         break;
     case (mikeAV > johnAV) && (mikeAV > maryAV) :
     //case (mikeAV > maryAV) :
-        console.log('Mike has the highest average of ' + mikeAV); 
+        console.log('Mike has the highest average of ' + mikeAV);
         break;
     case (maryAV > johnAV) && (maryAV > mikeAV) :
     //case (maryAV > mikeAV) :
-        console.log('Mary has the highest average of ' + maryAV); 
-          
+        console.log('Mary has the highest average of ' + maryAV);
+
 
 }
 
@@ -129,14 +129,14 @@ console.log('Willie is '+calculateage(2003) +' years old.');
 
 var whatDoYouDo = function(myname,job1) {
     switch (job1) {
-        case 'teacher' : 
+        case 'teacher' :
             return myname + ' teaches to read and write';
         case 'police' :
             return myname +' Protects people from themselves';
-        default : 
+        default :
             return myname +' Not sure I know what they do hey';
     }
- 
+
 }
 console.log(whatDoYouDo('karel','cleaner'));
 
@@ -167,45 +167,45 @@ johnrestaurantBills = [124,48,268];
 johnrestaurantTips = [0,0,0];
 
 if (johnrestaurantBills[0] >= 50 && johnrestaurantBills[0] <= 200){
-    johnrestaurantTips[0] = johnrestaurantBills[0] * (15/100); 
-} 
+    johnrestaurantTips[0] = johnrestaurantBills[0] * (15/100);
+}
 
 else if (johnrestaurantBills[0] < 50){
-    johnrestaurantTips[0] = johnrestaurantBills[0] * (15/100); 
-} 
+    johnrestaurantTips[0] = johnrestaurantBills[0] * (15/100);
+}
 
 else  {
-    johnrestaurantTips[0] = johnrestaurantBills[0] * (15/100); 
+    johnrestaurantTips[0] = johnrestaurantBills[0] * (15/100);
 }
 
 
 if (johnrestaurantBills[1] >= 50 && johnrestaurantBills[1] <= 200){
-    johnrestaurantTips[1] = johnrestaurantBills[1] * (15/100); 
-} 
+    johnrestaurantTips[1] = johnrestaurantBills[1] * (15/100);
+}
 
 else if (johnrestaurantBills[1] < 50){
-    johnrestaurantTips[1] = johnrestaurantBills[1] * (15/100); 
-} 
+    johnrestaurantTips[1] = johnrestaurantBills[1] * (15/100);
+}
 
 else  {
-    johnrestaurantTips[1] = johnrestaurantBills[1] * (15/100); 
+    johnrestaurantTips[1] = johnrestaurantBills[1] * (15/100);
 }
 
 
 if (johnrestaurantBills[2] >= 50 && johnrestaurantBills[2] <= 200){
-    johnrestaurantTips[2] = johnrestaurantBills[2] * (15/100); 
-} 
+    johnrestaurantTips[2] = johnrestaurantBills[2] * (15/100);
+}
 
 else if (johnrestaurantBills[1] < 50){
-    johnrestaurantTips[2] = johnrestaurantBills[2] * (15/100); 
-} 
+    johnrestaurantTips[2] = johnrestaurantBills[2] * (15/100);
+}
 
 else  {
-    johnrestaurantTips[2] = johnrestaurantBills[2] * (15/100); 
+    johnrestaurantTips[2] = johnrestaurantBills[2] * (15/100);
 }
 
 console.log(johnrestaurantBills);
-console.log(johnrestaurantTips); 
+console.log(johnrestaurantTips);
 */
 
 //Objects and properties
@@ -237,7 +237,7 @@ console.log(john['salary']);
 jane = new Object;
 jane.name = 'Jane';
 
-console.log(jane.name); 
+console.log(jane.name);
 //Objects and methods
 */
 
@@ -250,7 +250,7 @@ mark = {
     bmi : 0,
     markbmi : function (height,weight) {
         return weight / (height * height);
-    }   
+    }
 
 }
 
@@ -261,7 +261,7 @@ john = {
     bmi : 0,
     johnbmi : function (height,weight) {
         return weight / (height * height);
-    }   
+    }
 
 }
 //var johnbmi = john.johnbmi(1.7,160);
@@ -272,7 +272,7 @@ john.bmi = john.johnbmi(john.height,john.weight);
 console.log(mark.fullName +' BMI is at :'+ mark.markbmi(mark.height,mark.weight));
 console.log(john.fullName +' John\s BMI is at :'+ john.johnbmi(john.height,john.weight));
 
-mark.bmi > john.bmi ? console.log('The BMI of '+mark.fullName+' is higher than that of '+john.fullName): 
+mark.bmi > john.bmi ? console.log('The BMI of '+mark.fullName+' is higher than that of '+john.fullName):
                           console.log('The BMI of '+mark.fullName+' is lower  that that of '+john.fullName);
 
 
@@ -292,7 +292,7 @@ var john = {
     restaurantBills : [],
     restaurantTips : [],
     restaurantTotalBills : [],
-    tipaverage : 0    
+    tipaverage : 0
 }
 
 var mark = {
@@ -313,7 +313,7 @@ for (i=0;i<john.restaurantBills.length;i++) {
     //console.log(john.restaurantBills[i]);
     if (john.restaurantBills[i] < 50){
         john.restaurantTips[i] = john.restaurantBills[i] * (20/100);
-    } 
+    }
     else if (john.restaurantBills[i] >= 50 && john.restaurantBills[i] <= 200){
         john.restaurantTips[i] = john.restaurantBills[i] * (15/100);
     }
@@ -346,7 +346,7 @@ for (i=0;i<mark.restaurantBills.length;i++) {
     //console.log(mark.restaurantBills[i]);
     if (mark.restaurantBills[i] < 50){
         mark.restaurantTips[i] = mark.restaurantBills[i] * (20/100);
-    } 
+    }
     else if (mark.restaurantBills[i] >= 50 && mark.restaurantBills[i] <= 200){
         mark.restaurantTips[i] = mark.restaurantBills[i] * (15/100);
     }
@@ -365,6 +365,3 @@ for (i=0;i<mark.restaurantBills.length;i++){
 mark.tipaverage = mark.tipaverage/mark.restaurantTips.length;
 
 console.log('The average tips for Mark was :'+mark.tipaverage);
-
-
-
